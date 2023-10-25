@@ -16,17 +16,18 @@ public class Patlama : MonoBehaviour
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         //Draw Ray..
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition.x = 20f;
-        mousePosition = cam.ScreenToWorldPoint(mousePosition);
-        Debug.DrawRay(transform.position, mousePosition - transform.position, Color.red);
 
-        //Ray isin = cam.ScreenPointToRay(Input.mousePosition);
-        //Physics.Raycast(isin, out carpma); // Isinin dokunmasına ait "carpma" bilgisini yayinlariz.
-        //Debug.DrawRay(isin.origin, isin.direction * 100f, Color.red); // 100 birimlik isin gonderir
+        //Vector3 mousePosition = Input.mousePosition;
+        //mousePosition.z = 20f;
+        //mousePosition = cam.ScreenToWorldPoint(mousePosition);
+        //Debug.DrawRay(transform.position, mousePosition - transform.position, Color.red);
+
+        Ray isin = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Physics.Raycast(isin, out carpma); // Isinin dokunmasına ait "carpma" bilgisini yayinlariz.
+        Debug.DrawRay(isin.origin, isin.direction, Color.red); // 100 birimlik isin gonderir
 
     }
 }

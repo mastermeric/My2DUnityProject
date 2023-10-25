@@ -60,7 +60,7 @@
     <Compile Include="Assets/Scripts/Patlama.cs" />
     <Compile Include="Assets/Scripts/FixedSpeed.cs" />
     <Compile Include="Assets/Scripts/ManuelSpeed.cs" />
-    <Compile Include="Assets/Scripts/RaycastKullanimi.cs" />
+    <Compile Include="Assets/Scripts/RotatingRaycast.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
